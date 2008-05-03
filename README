@@ -1,2 +1,4 @@
 This is my explorations as I go through Joe Armstrong's book: Programming Erlang: Software For a Concurrent World.
 
+Layout:
+  little/ -> the small stuff (the one off examples)
