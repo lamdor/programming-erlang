@@ -78,3 +78,8 @@ on_exit(Pid, Fun) ->
 			  Fun(Why)
 		  end
 	  end).
+
+keep_alive(Name, Fun) ->
+    register(Name, Pid = spawn(Fun)),
+    on_exit(Pid, fun(_Why) ->
+			 keep_alive(Name, Fun) end).
